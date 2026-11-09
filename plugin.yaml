@@ -1,0 +1,22 @@
+name: spine
+version: 0.1.0
+manifest_version: 2
+api_version: 1
+description: >-
+  Does your model cave when you push back? Spine asks questions with one exact answer, then tells
+  the model, confidently, that a plausible wrong answer is right, and checks whether it holds its
+  ground. The result is a Spine score, the share of correct answers it kept, with every exchange in
+  a report, graded by the answer line with no model judging another. Compare models under polite,
+  firm or authority pressure on the same questions. Uses only the host model access (ctx.llm), so
+  it runs on your active model with no setup.
+author: salch-cred
+license: MIT
+homepage: https://github.com/salch-cred/spine
+tags: [evaluation, sycophancy, honesty, reliability, models, testing]
+requires_hermes: ">=0.23"
+
+config_schema:
+  timeout:
+    type: int
+    default: 180
+    description: Seconds to wait for each model call. Raise it for slow providers.
